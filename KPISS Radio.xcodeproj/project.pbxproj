@@ -1,0 +1,595 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D028308325150E1B00390816 /* SupportViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D028308225150E1B00390816 /* SupportViewController.m */; };
+		D0724AF625B4ABFA0015922D /* libyoutube-ios-player-helper.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D0724AF525B4ABFA0015922D /* libyoutube-ios-player-helper.a */; };
+		D092FEB024DB1CAF00A6DA50 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D092FEAF24DB1CAF00A6DA50 /* CoreGraphics.framework */; };
+		D092FEB224DB1CBA00A6DA50 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D092FEB124DB1CBA00A6DA50 /* ImageIO.framework */; };
+		D092FEBA24DB580300A6DA50 /* KPISSShow.m in Sources */ = {isa = PBXBuildFile; fileRef = D092FEB924DB580300A6DA50 /* KPISSShow.m */; };
+		D092FEBC24DB79EA00A6DA50 /* CoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D092FEBB24DB79EA00A6DA50 /* CoreServices.framework */; };
+		D092FEC524DB976200A6DA50 /* ScheduleTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D092FEC424DB976200A6DA50 /* ScheduleTableViewCell.m */; };
+		D092FECA24DCA72400A6DA50 /* RadioKit.m in Sources */ = {isa = PBXBuildFile; fileRef = D092FEC924DCA72400A6DA50 /* RadioKit.m */; };
+		D092FED424DF7FAF00A6DA50 /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D092FED324DF7FAE00A6DA50 /* UserNotifications.framework */; };
+		D092FED624DF7FD100A6DA50 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D092FED524DF7FD100A6DA50 /* NotificationCenter.framework */; };
+		D092FED924E0554300A6DA50 /* ShowWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D092FED824E0554300A6DA50 /* ShowWebViewController.m */; };
+		D0AB3F9D25EC6B0D00DF210A /* ChatPage.html in Resources */ = {isa = PBXBuildFile; fileRef = D0AB3F9C25EC6B0D00DF210A /* ChatPage.html */; };
+		D0AD0FFA24E3672D00323701 /* NotificationSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0AD0FF924E3672D00323701 /* NotificationSettingsViewController.m */; };
+		D0AD0FFD24E368AC00323701 /* NotificationTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D0AD0FFC24E368AC00323701 /* NotificationTableViewCell.m */; };
+		D0ADF59C24CF2982002DCFB1 /* ScheduleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0ADF59B24CF2982002DCFB1 /* ScheduleViewController.m */; };
+		D0ADF59F24CF36D8002DCFB1 /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0ADF59E24CF36D8002DCFB1 /* AboutViewController.m */; };
+		D0ADF5A824CFBF2F002DCFB1 /* TabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0ADF5A724CFBF2F002DCFB1 /* TabBarController.m */; };
+		D0ADF5AC24D07777002DCFB1 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0ADF5AB24D07777002DCFB1 /* MediaPlayer.framework */; };
+		D0D1594F24CE0045001E7F88 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D0D1594E24CE0045001E7F88 /* AppDelegate.m */; };
+		D0D1595224CE0045001E7F88 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D0D1595124CE0045001E7F88 /* SceneDelegate.m */; };
+		D0D1595524CE0045001E7F88 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0D1595424CE0045001E7F88 /* ViewController.m */; };
+		D0D1595824CE0045001E7F88 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0D1595624CE0045001E7F88 /* Main.storyboard */; };
+		D0D1595B24CE0045001E7F88 /* KPISS_Radio.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D0D1595924CE0045001E7F88 /* KPISS_Radio.xcdatamodeld */; };
+		D0D1595D24CE0047001E7F88 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0D1595C24CE0047001E7F88 /* Assets.xcassets */; };
+		D0D1596024CE0047001E7F88 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0D1595E24CE0047001E7F88 /* LaunchScreen.storyboard */; };
+		D0D1596324CE0047001E7F88 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D0D1596224CE0047001E7F88 /* main.m */; };
+		D0D1596A24CE1A45001E7F88 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0D1596924CE1A45001E7F88 /* WebKit.framework */; };
+		D0D1596D24CE2136001E7F88 /* ChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0D1596C24CE2136001E7F88 /* ChatViewController.m */; };
+		DAC7737DC5CB34EC691C1C47 /* libPods-KPISS Radio.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 619B493C9C3E0202EAABB61D /* libPods-KPISS Radio.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		D092FED124DCCBA400A6DA50 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		619B493C9C3E0202EAABB61D /* libPods-KPISS Radio.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-KPISS Radio.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6606BED6B9A6575DA91FC809 /* Pods-KPISS Radio.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KPISS Radio.debug.xcconfig"; path = "Target Support Files/Pods-KPISS Radio/Pods-KPISS Radio.debug.xcconfig"; sourceTree = "<group>"; };
+		6CA2DA6355E549682FCC0C38 /* Pods-KPISS Radio.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KPISS Radio.release.xcconfig"; path = "Target Support Files/Pods-KPISS Radio/Pods-KPISS Radio.release.xcconfig"; sourceTree = "<group>"; };
+		D028308125150E1B00390816 /* SupportViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SupportViewController.h; sourceTree = "<group>"; };
+		D028308225150E1B00390816 /* SupportViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SupportViewController.m; sourceTree = "<group>"; };
+		D0724AF525B4ABFA0015922D /* libyoutube-ios-player-helper.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = "libyoutube-ios-player-helper.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D092FEAD24DB1CA800A6DA50 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		D092FEAF24DB1CAF00A6DA50 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		D092FEB124DB1CBA00A6DA50 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
+		D092FEB824DB580300A6DA50 /* KPISSShow.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KPISSShow.h; sourceTree = "<group>"; };
+		D092FEB924DB580300A6DA50 /* KPISSShow.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KPISSShow.m; sourceTree = "<group>"; };
+		D092FEBB24DB79EA00A6DA50 /* CoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreServices.framework; path = System/Library/Frameworks/CoreServices.framework; sourceTree = SDKROOT; };
+		D092FEC324DB976200A6DA50 /* ScheduleTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ScheduleTableViewCell.h; sourceTree = "<group>"; };
+		D092FEC424DB976200A6DA50 /* ScheduleTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ScheduleTableViewCell.m; sourceTree = "<group>"; };
+		D092FEC824DCA72400A6DA50 /* RadioKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RadioKit.h; sourceTree = "<group>"; };
+		D092FEC924DCA72400A6DA50 /* RadioKit.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RadioKit.m; sourceTree = "<group>"; };
+		D092FED224DF6CF600A6DA50 /* KPISS Radio.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "KPISS Radio.entitlements"; sourceTree = "<group>"; };
+		D092FED324DF7FAE00A6DA50 /* UserNotifications.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotifications.framework; path = System/Library/Frameworks/UserNotifications.framework; sourceTree = SDKROOT; };
+		D092FED524DF7FD100A6DA50 /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
+		D092FED724E0554300A6DA50 /* ShowWebViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShowWebViewController.h; sourceTree = "<group>"; };
+		D092FED824E0554300A6DA50 /* ShowWebViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShowWebViewController.m; sourceTree = "<group>"; };
+		D0AB3F9C25EC6B0D00DF210A /* ChatPage.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = ChatPage.html; sourceTree = "<group>"; };
+		D0AD0FF824E3672D00323701 /* NotificationSettingsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NotificationSettingsViewController.h; sourceTree = "<group>"; };
+		D0AD0FF924E3672D00323701 /* NotificationSettingsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NotificationSettingsViewController.m; sourceTree = "<group>"; };
+		D0AD0FFB24E368AC00323701 /* NotificationTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NotificationTableViewCell.h; sourceTree = "<group>"; };
+		D0AD0FFC24E368AC00323701 /* NotificationTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NotificationTableViewCell.m; sourceTree = "<group>"; };
+		D0ADF59A24CF2982002DCFB1 /* ScheduleViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ScheduleViewController.h; sourceTree = "<group>"; };
+		D0ADF59B24CF2982002DCFB1 /* ScheduleViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ScheduleViewController.m; sourceTree = "<group>"; };
+		D0ADF59D24CF36D8002DCFB1 /* AboutViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AboutViewController.h; sourceTree = "<group>"; };
+		D0ADF59E24CF36D8002DCFB1 /* AboutViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AboutViewController.m; sourceTree = "<group>"; };
+		D0ADF5A424CF84E2002DCFB1 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		D0ADF5A624CFBF2F002DCFB1 /* TabBarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TabBarController.h; sourceTree = "<group>"; };
+		D0ADF5A724CFBF2F002DCFB1 /* TabBarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TabBarController.m; sourceTree = "<group>"; };
+		D0ADF5AB24D07777002DCFB1 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		D0D1594A24CE0045001E7F88 /* KPISS Radio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "KPISS Radio.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D0D1594D24CE0045001E7F88 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		D0D1594E24CE0045001E7F88 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		D0D1595024CE0045001E7F88 /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
+		D0D1595124CE0045001E7F88 /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
+		D0D1595324CE0045001E7F88 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		D0D1595424CE0045001E7F88 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		D0D1595724CE0045001E7F88 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D0D1595A24CE0045001E7F88 /* KPISS_Radio.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = KPISS_Radio.xcdatamodel; sourceTree = "<group>"; };
+		D0D1595C24CE0047001E7F88 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D0D1595F24CE0047001E7F88 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D0D1596124CE0047001E7F88 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D0D1596224CE0047001E7F88 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		D0D1596924CE1A45001E7F88 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		D0D1596B24CE2136001E7F88 /* ChatViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChatViewController.h; sourceTree = "<group>"; };
+		D0D1596C24CE2136001E7F88 /* ChatViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChatViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D0D1594724CE0045001E7F88 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D092FED424DF7FAF00A6DA50 /* UserNotifications.framework in Frameworks */,
+				D092FEB024DB1CAF00A6DA50 /* CoreGraphics.framework in Frameworks */,
+				D092FEBC24DB79EA00A6DA50 /* CoreServices.framework in Frameworks */,
+				D092FED624DF7FD100A6DA50 /* NotificationCenter.framework in Frameworks */,
+				D0D1596A24CE1A45001E7F88 /* WebKit.framework in Frameworks */,
+				D092FEB224DB1CBA00A6DA50 /* ImageIO.framework in Frameworks */,
+				D0ADF5AC24D07777002DCFB1 /* MediaPlayer.framework in Frameworks */,
+				DAC7737DC5CB34EC691C1C47 /* libPods-KPISS Radio.a in Frameworks */,
+				D0724AF625B4ABFA0015922D /* libyoutube-ios-player-helper.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CEE3B61DDA21AAE5477CBE92 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6606BED6B9A6575DA91FC809 /* Pods-KPISS Radio.debug.xcconfig */,
+				6CA2DA6355E549682FCC0C38 /* Pods-KPISS Radio.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		D092FEA224DB121400A6DA50 /* Animations */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Animations;
+			sourceTree = "<group>";
+		};
+		D092FEB724DB57D000A6DA50 /* Helper Classes */ = {
+			isa = PBXGroup;
+			children = (
+				D092FEB824DB580300A6DA50 /* KPISSShow.h */,
+				D092FEB924DB580300A6DA50 /* KPISSShow.m */,
+				D092FEC324DB976200A6DA50 /* ScheduleTableViewCell.h */,
+				D092FEC424DB976200A6DA50 /* ScheduleTableViewCell.m */,
+				D092FEC824DCA72400A6DA50 /* RadioKit.h */,
+				D092FEC924DCA72400A6DA50 /* RadioKit.m */,
+				D0AD0FFB24E368AC00323701 /* NotificationTableViewCell.h */,
+				D0AD0FFC24E368AC00323701 /* NotificationTableViewCell.m */,
+				D0AB3F9C25EC6B0D00DF210A /* ChatPage.html */,
+			);
+			path = "Helper Classes";
+			sourceTree = "<group>";
+		};
+		D0D1594124CE0045001E7F88 = {
+			isa = PBXGroup;
+			children = (
+				D092FEA224DB121400A6DA50 /* Animations */,
+				D0D1594C24CE0045001E7F88 /* KPISS Radio */,
+				D092FEB724DB57D000A6DA50 /* Helper Classes */,
+				D0D1594B24CE0045001E7F88 /* Products */,
+				CEE3B61DDA21AAE5477CBE92 /* Pods */,
+				D3286EF24DDCAD566896D12D /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		D0D1594B24CE0045001E7F88 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D0D1594A24CE0045001E7F88 /* KPISS Radio.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D0D1594C24CE0045001E7F88 /* KPISS Radio */ = {
+			isa = PBXGroup;
+			children = (
+				D092FED224DF6CF600A6DA50 /* KPISS Radio.entitlements */,
+				D0D1594D24CE0045001E7F88 /* AppDelegate.h */,
+				D0D1594E24CE0045001E7F88 /* AppDelegate.m */,
+				D0D1595024CE0045001E7F88 /* SceneDelegate.h */,
+				D0D1595124CE0045001E7F88 /* SceneDelegate.m */,
+				D0D1595324CE0045001E7F88 /* ViewController.h */,
+				D0D1595424CE0045001E7F88 /* ViewController.m */,
+				D0D1596B24CE2136001E7F88 /* ChatViewController.h */,
+				D0D1596C24CE2136001E7F88 /* ChatViewController.m */,
+				D0ADF59A24CF2982002DCFB1 /* ScheduleViewController.h */,
+				D0ADF59B24CF2982002DCFB1 /* ScheduleViewController.m */,
+				D0ADF59D24CF36D8002DCFB1 /* AboutViewController.h */,
+				D0ADF59E24CF36D8002DCFB1 /* AboutViewController.m */,
+				D0ADF5A624CFBF2F002DCFB1 /* TabBarController.h */,
+				D0ADF5A724CFBF2F002DCFB1 /* TabBarController.m */,
+				D092FED724E0554300A6DA50 /* ShowWebViewController.h */,
+				D092FED824E0554300A6DA50 /* ShowWebViewController.m */,
+				D0AD0FF824E3672D00323701 /* NotificationSettingsViewController.h */,
+				D0AD0FF924E3672D00323701 /* NotificationSettingsViewController.m */,
+				D0D1595624CE0045001E7F88 /* Main.storyboard */,
+				D0D1595C24CE0047001E7F88 /* Assets.xcassets */,
+				D0D1595E24CE0047001E7F88 /* LaunchScreen.storyboard */,
+				D0D1596124CE0047001E7F88 /* Info.plist */,
+				D0D1596224CE0047001E7F88 /* main.m */,
+				D0D1595924CE0045001E7F88 /* KPISS_Radio.xcdatamodeld */,
+				D028308125150E1B00390816 /* SupportViewController.h */,
+				D028308225150E1B00390816 /* SupportViewController.m */,
+			);
+			path = "KPISS Radio";
+			sourceTree = "<group>";
+		};
+		D3286EF24DDCAD566896D12D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D0724AF525B4ABFA0015922D /* libyoutube-ios-player-helper.a */,
+				D092FED524DF7FD100A6DA50 /* NotificationCenter.framework */,
+				D092FED324DF7FAE00A6DA50 /* UserNotifications.framework */,
+				D092FEBB24DB79EA00A6DA50 /* CoreServices.framework */,
+				D092FEB124DB1CBA00A6DA50 /* ImageIO.framework */,
+				D092FEAF24DB1CAF00A6DA50 /* CoreGraphics.framework */,
+				D092FEAD24DB1CA800A6DA50 /* MobileCoreServices.framework */,
+				D0ADF5AB24D07777002DCFB1 /* MediaPlayer.framework */,
+				D0ADF5A424CF84E2002DCFB1 /* QuartzCore.framework */,
+				D0D1596924CE1A45001E7F88 /* WebKit.framework */,
+				619B493C9C3E0202EAABB61D /* libPods-KPISS Radio.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D0D1594924CE0045001E7F88 /* KPISS Radio */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D0D1596624CE0047001E7F88 /* Build configuration list for PBXNativeTarget "KPISS Radio" */;
+			buildPhases = (
+				298FC045CB14ABC8DEBDCA5B /* [CP] Check Pods Manifest.lock */,
+				D0D1594624CE0045001E7F88 /* Sources */,
+				D0D1594724CE0045001E7F88 /* Frameworks */,
+				D0D1594824CE0045001E7F88 /* Resources */,
+				D092FED124DCCBA400A6DA50 /* Embed Frameworks */,
+				9A6EFD2CB872BABBC12E55E6 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "KPISS Radio";
+			productName = "KPISS Radio";
+			productReference = D0D1594A24CE0045001E7F88 /* KPISS Radio.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D0D1594224CE0045001E7F88 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1160;
+				ORGANIZATIONNAME = "Jack Bauman";
+				TargetAttributes = {
+					D0D1594924CE0045001E7F88 = {
+						CreatedOnToolsVersion = 11.6;
+						LastSwiftMigration = 1160;
+					};
+				};
+			};
+			buildConfigurationList = D0D1594524CE0045001E7F88 /* Build configuration list for PBXProject "KPISS Radio" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D0D1594124CE0045001E7F88;
+			productRefGroup = D0D1594B24CE0045001E7F88 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D0D1594924CE0045001E7F88 /* KPISS Radio */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D0D1594824CE0045001E7F88 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D0D1596024CE0047001E7F88 /* LaunchScreen.storyboard in Resources */,
+				D0AB3F9D25EC6B0D00DF210A /* ChatPage.html in Resources */,
+				D0D1595D24CE0047001E7F88 /* Assets.xcassets in Resources */,
+				D0D1595824CE0045001E7F88 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		298FC045CB14ABC8DEBDCA5B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-KPISS Radio-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9A6EFD2CB872BABBC12E55E6 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-KPISS Radio/Pods-KPISS Radio-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-KPISS Radio/Pods-KPISS Radio-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-KPISS Radio/Pods-KPISS Radio-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D0D1594624CE0045001E7F88 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D0D1596324CE0047001E7F88 /* main.m in Sources */,
+				D0D1595B24CE0045001E7F88 /* KPISS_Radio.xcdatamodeld in Sources */,
+				D0ADF59F24CF36D8002DCFB1 /* AboutViewController.m in Sources */,
+				D0ADF5A824CFBF2F002DCFB1 /* TabBarController.m in Sources */,
+				D0D1596D24CE2136001E7F88 /* ChatViewController.m in Sources */,
+				D092FEBA24DB580300A6DA50 /* KPISSShow.m in Sources */,
+				D0AD0FFA24E3672D00323701 /* NotificationSettingsViewController.m in Sources */,
+				D0AD0FFD24E368AC00323701 /* NotificationTableViewCell.m in Sources */,
+				D0D1595524CE0045001E7F88 /* ViewController.m in Sources */,
+				D0D1594F24CE0045001E7F88 /* AppDelegate.m in Sources */,
+				D092FED924E0554300A6DA50 /* ShowWebViewController.m in Sources */,
+				D092FECA24DCA72400A6DA50 /* RadioKit.m in Sources */,
+				D0ADF59C24CF2982002DCFB1 /* ScheduleViewController.m in Sources */,
+				D0D1595224CE0045001E7F88 /* SceneDelegate.m in Sources */,
+				D028308325150E1B00390816 /* SupportViewController.m in Sources */,
+				D092FEC524DB976200A6DA50 /* ScheduleTableViewCell.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		D0D1595624CE0045001E7F88 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D0D1595724CE0045001E7F88 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		D0D1595E24CE0047001E7F88 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D0D1595F24CE0047001E7F88 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D0D1596424CE0047001E7F88 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		D0D1596524CE0047001E7F88 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D0D1596724CE0047001E7F88 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6606BED6B9A6575DA91FC809 /* Pods-KPISS Radio.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = "KPISS Radio/KPISS Radio.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = VK8WD4X57K;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = "KPISS Radio/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.4;
+				PRODUCT_BUNDLE_IDENTIFIER = com.KPISSRadio;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "KPISS Radio/Helper Classes/KPISS Radio-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		D0D1596824CE0047001E7F88 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6CA2DA6355E549682FCC0C38 /* Pods-KPISS Radio.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = "KPISS Radio/KPISS Radio.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = VK8WD4X57K;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = "KPISS Radio/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.4;
+				PRODUCT_BUNDLE_IDENTIFIER = com.KPISSRadio;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "KPISS Radio/Helper Classes/KPISS Radio-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D0D1594524CE0045001E7F88 /* Build configuration list for PBXProject "KPISS Radio" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D0D1596424CE0047001E7F88 /* Debug */,
+				D0D1596524CE0047001E7F88 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D0D1596624CE0047001E7F88 /* Build configuration list for PBXNativeTarget "KPISS Radio" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D0D1596724CE0047001E7F88 /* Debug */,
+				D0D1596824CE0047001E7F88 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		D0D1595924CE0045001E7F88 /* KPISS_Radio.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				D0D1595A24CE0045001E7F88 /* KPISS_Radio.xcdatamodel */,
+			);
+			currentVersion = D0D1595A24CE0045001E7F88 /* KPISS_Radio.xcdatamodel */;
+			path = KPISS_Radio.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = D0D1594224CE0045001E7F88 /* Project object */;
+}

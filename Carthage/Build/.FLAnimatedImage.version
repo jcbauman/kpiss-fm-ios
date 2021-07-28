@@ -1,0 +1,19 @@
+{
+  "Mac" : [
+
+  ],
+  "watchOS" : [
+
+  ],
+  "tvOS" : [
+
+  ],
+  "commitish" : "1.0.14",
+  "iOS" : [
+    {
+      "name" : "FLAnimatedImage",
+      "hash" : "d1a7c1a3074f01f46118c4ef627f3656eddf7002b37d682f313fb7c03bee0792",
+      "linking" : "dynamic"
+    }
+  ]
+}

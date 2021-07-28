@@ -1,0 +1,20 @@
+PODS:
+  - GTMNSStringHTMLAdditions (0.2.1)
+  - youtube-ios-player-helper (1.0.2)
+
+DEPENDENCIES:
+  - GTMNSStringHTMLAdditions
+  - youtube-ios-player-helper (~> 1.0.2)
+
+SPEC REPOS:
+  trunk:
+    - GTMNSStringHTMLAdditions
+    - youtube-ios-player-helper
+
+SPEC CHECKSUMS:
+  GTMNSStringHTMLAdditions: 4bfc402b1b17165360728083156cae0a74ecb308
+  youtube-ios-player-helper: 40b96e52c22445f0fdc43731cefa32c67075ff81
+
+PODFILE CHECKSUM: f35d7dae57fe73c7ebfe28e098c42ec80d27089e
+
+COCOAPODS: 1.9.3

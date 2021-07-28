@@ -1,0 +1,6 @@
+module Pods_KPISS_Radio {
+  umbrella header "Pods-KPISS Radio-umbrella.h"
+
+  export *
+  module * { export * }
+}

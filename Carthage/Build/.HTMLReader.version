@@ -1,0 +1,31 @@
+{
+  "Mac" : [
+    {
+      "name" : "HTMLReader",
+      "hash" : "d6e091061f963f53090323a2668e47f37dac53790a8e14697c7043c8d6e1d9bb",
+      "linking" : "dynamic"
+    }
+  ],
+  "watchOS" : [
+    {
+      "name" : "HTMLReader",
+      "hash" : "c41455dbe7545fe7aa704bd937792fab9bb63951dd26a641d13c705b93462740",
+      "linking" : "dynamic"
+    }
+  ],
+  "tvOS" : [
+    {
+      "name" : "HTMLReader",
+      "hash" : "67c6a1b46b5864772063d6136d76d75aab85ef830d1bf46f1ba9b6895f1cc780",
+      "linking" : "dynamic"
+    }
+  ],
+  "commitish" : "v2.1.5",
+  "iOS" : [
+    {
+      "name" : "HTMLReader",
+      "hash" : "a4c077adb73847d77c7b77003459d380abc147a583bed40e0a5fd4c89b9a8b6a",
+      "linking" : "dynamic"
+    }
+  ]
+}
