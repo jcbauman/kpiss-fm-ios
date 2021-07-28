@@ -32,7 +32,6 @@ NS_ASSUME_NONNULL_BEGIN
 -(void)setShowContentList:(NSMutableArray<KPISSShow *> *)showContentArg;
 -(BOOL)updateScheduleNewTime;
 -(void)configurePlayer;
--(BOOL)getImageFromWeblink:(NSInteger)index;
 -(void)getSchedule;
 -(KPISSShow*)getShowByName:(NSString*)name;
 -(KPISSShow*)getNextShowByName:(NSString*)name;
