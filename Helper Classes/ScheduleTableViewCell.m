@@ -32,7 +32,6 @@
      self.contentView.layer.shadowColor   = [UIColor blackColor].CGColor;
      self.contentView.layer.shadowOffset  = CGSizeMake(0.0f, 1.0f);
      self.contentView.layer.shadowOpacity = 0.5f;
-    self.timeLbl.backgroundColor = [UIColor colorWithRed:239.0/255.0 green:72.0/255.0 blue:105.0/255.0 alpha:1.0];
      self.contentView.backgroundColor = [UIColor yellowColor];
      self.contentView.frame = CGRectMake(self.bounds.origin.x + 10,
                                           self.bounds.origin.y + 5,

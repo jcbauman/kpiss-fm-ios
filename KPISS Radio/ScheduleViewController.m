@@ -23,6 +23,7 @@
     [super viewDidLoad];
     self.showContent = [[NSMutableArray alloc] init];
     self.notificationList = [[NSMutableArray alloc] init];
+    self.showContentByDay = [[NSMutableArray alloc] init];
     self.scheduleTableView.delegate = self;
     self.scheduleTableView.dataSource = self;
     [self.scheduleTableView setBackgroundColor:[UIColor systemYellowColor]];
@@ -35,6 +36,7 @@
 -(void)viewWillAppear:(BOOL)animated{
     //get showContent
     self.showContent = [RadioKit radioKit].showContent;
+    self.showContentByDay =[RadioKit radioKit].showContentByDay;
     [[UNUserNotificationCenter currentNotificationCenter] getPendingNotificationRequestsWithCompletionHandler:^(NSArray<UNNotificationRequest *> * _Nonnull requests) {
         [self.notificationList removeAllObjects];
         if(requests.count){
@@ -54,19 +56,28 @@
     if(indexPath == self.selectedCell){
         return 250;
     } else {
-        return 60;
+        return 62;
     }
 }
 
 -(NSInteger) tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return self.showContent.count;
+    return [self.showContentByDay objectAtIndex:section].count;
+}
+
+-(NSInteger) getShowIndexForIndexPath:(NSIndexPath *)indexPath{
+    int returnVal = 0;
+    for(int i = 0;i<indexPath.section; i++){
+        returnVal += [self.showContentByDay objectAtIndex:i].count;
+    }
+    returnVal += indexPath.row;
+    return returnVal;
 }
 
 -(UITableViewCell*) tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     ScheduleTableViewCell * cell = (ScheduleTableViewCell*)[tableView dequeueReusableCellWithIdentifier:@"schedCell"];
-    
+    KPISSShow* thisShow = [[self.showContentByDay objectAtIndex:indexPath.section] objectAtIndex:indexPath.row];
     if(self.showContent.count >= indexPath.row){
-        cell.showNameLabel.text = [self.showContent objectAtIndex:indexPath.row].showName;
+        cell.showNameLabel.text = thisShow.showName;
         //        if([self.showContent objectAtIndex:indexPath.row].showDescription){
         //            cell.descriptionText.text = [self.showContent objectAtIndex:indexPath.row].showDescription;
         //        } else {
@@ -76,17 +87,17 @@
     
     //format showtime
     NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
-    [dateFormat setDateFormat:@"E h"];
+    [dateFormat setDateFormat:@"h"];
     
     NSDateFormatter *dateFormat2 = [[NSDateFormatter alloc] init];
-    [dateFormat2 setDateFormat:@"-ha"];
+    [dateFormat2 setDateFormat:@" - ha"];
     NSLocale *locale = [[NSLocale alloc]
                         initWithLocaleIdentifier:@"en_US_POSIX"];
     [dateFormat setLocale:locale];
     [dateFormat2 setLocale:locale];
     
-    NSString * timeString = [dateFormat stringFromDate:[self.showContent objectAtIndex:indexPath.row].startTime];
-    NSString * timeString2 = [[timeString stringByAppendingString:[dateFormat2 stringFromDate:[self.showContent objectAtIndex:indexPath.row].endTime]] uppercaseString];
+    NSString * timeString = [dateFormat stringFromDate:thisShow.startTime];
+    NSString * timeString2 = [[timeString stringByAppendingString:[dateFormat2 stringFromDate:thisShow.endTime]] uppercaseString];
     cell.timeLbl.text = timeString2;
     
     if(self.selectedCell != indexPath){
@@ -95,20 +106,22 @@
         cell.djLabel.hidden = YES;
         //cell.descriptionText.hidden = YES;
     } else {
+        if(thisShow.websiteLink){
         cell.websiteBtn.hidden = NO;
+        }
         cell.notificationBtn.hidden = NO;
         cell.djLabel.hidden = NO;
         //cell.descriptionText.hidden = NO;
-        [cell.djLabel setText:[self.showContent objectAtIndex:indexPath.row].showDJ];
-        if(![self.notificationList containsObject:[self.showContent objectAtIndex:indexPath.row].showName]){
+        [cell.djLabel setText:thisShow.showDJ];
+        if(![self.notificationList containsObject:thisShow.showName]){
             [cell.notificationBtn setImage:[UIImage systemImageNamed:@"bell"] forState:UIControlStateNormal];
         }else{
             [cell.notificationBtn setImage:[UIImage systemImageNamed:@"bell.fill"] forState:UIControlStateNormal];
         }
     }
-    cell.websiteBtn.tag = indexPath.row;
-    cell.isSpecialShow = [self.showContent objectAtIndex:indexPath.row].isSpecialShow != nil ? ((KPISSShow*)[self.showContent objectAtIndex:indexPath.row]).isSpecialShow : @"false";
-    cell.notificationBtn.tag = (indexPath.row + 999);
+    cell.websiteBtn.tag = [self getShowIndexForIndexPath:indexPath ];
+    cell.isSpecialShow = thisShow.isSpecialShow != nil ? thisShow.isSpecialShow : @"false";
+    cell.notificationBtn.tag = [self getShowIndexForIndexPath:indexPath] + 999;
     [cell.websiteBtn addTarget:self action:@selector(websiteBtnPressed:) forControlEvents:UIControlEventTouchUpInside];
     [cell.notificationBtn addTarget:self action:@selector(notificationBtnPressed:) forControlEvents:UIControlEventTouchUpInside];
     return cell;
@@ -171,6 +184,11 @@
     }
 }
 
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    return self.showContentByDay.count;
+}
+
 -(void)scheduleNotification:(KPISSShow*)thisShow{
     KPISSShow * showToSchedule = thisShow;
     UNUserNotificationCenter * center = [UNUserNotificationCenter currentNotificationCenter];
@@ -228,6 +246,32 @@
             [self.scheduleTableView reloadData];
         });
     }];
+}
+
+-(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
+{
+   UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, tableView.frame.size.width, 30)];
+   UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(10, 5, tableView.frame.size.width, 16)];
+    [label setFont:[UIFont fontWithName:@"Avenir Black" size:16]];
+    [label setText:@"MORE SHOWS..."];
+    if(self.showContentByDay.count > 0){
+        if([self.showContentByDay objectAtIndex:section].count > 0){
+        KPISSShow* firstShowInSection = [[self.showContentByDay objectAtIndex:section] objectAtIndex:0];
+        NSDateFormatter *weekday = [[NSDateFormatter alloc] init];
+            [weekday setDateFormat: @"EEEE"];
+            if(section > 6){
+        [weekday setDateFormat: @"EEEE, MMMM d"];
+            }
+            NSString* sectionTitle = [[weekday stringFromDate:firstShowInSection.startTime ] uppercaseString];
+            [label setText:sectionTitle];
+    }
+    }
+    view.layer.shadowOpacity = 0.2;
+    view.layer.shadowOffset = CGSizeMake(0, 5);
+    view.layer.shadowRadius = 1;
+   [view addSubview:label];
+    [view setBackgroundColor:[UIColor colorWithRed:239.0/255.0 green:72.0/255.0 blue:105.0/255.0 alpha:1.0]];
+   return view;
 }
 
 @end

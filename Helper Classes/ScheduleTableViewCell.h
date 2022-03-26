@@ -15,6 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (weak, nonatomic) IBOutlet UILabel *showNameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *djLabel;
 @property (strong, nonatomic)NSString *showDetails;
+@property (strong, nonatomic)NSString *showIndexForTag;
 @property (weak, nonatomic) IBOutlet UILabel *timeLbl;
 @property (weak, nonatomic) IBOutlet UIButton *websiteBtn;
 @property (weak, nonatomic) IBOutlet UIButton *notificationBtn;

@@ -15,6 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface RadioKit : NSObject <AVPlayerItemMetadataOutputPushDelegate>
 
 @property (strong, nonatomic) NSMutableArray<KPISSShow*> * showContent;
+@property (strong, nonatomic) NSMutableArray<NSMutableArray<KPISSShow*>*> * showContentByDay;
 @property (nonatomic, strong) AVPlayer* player;
 @property (nonatomic, strong) AVPlayerItem* playerItem;
 @property (nonatomic,strong) NSString* isPlaying;
@@ -40,6 +41,7 @@ NS_ASSUME_NONNULL_BEGIN
 -(BOOL)isShowCancelled:(NSString*)frequency withEndDate:(NSDate*)endTime;
 -(NSDate*)adjustForTimeZone:(NSDate*)thisDate withOriginalDate:(NSDate*)originalDate;
 -(void) makeShowDataRequest:(NSString*)webLink completionHandler:(void (^)(NSArray *array))completionHandler;
+-(void)sortShowContentByDays;
 
 
 @end

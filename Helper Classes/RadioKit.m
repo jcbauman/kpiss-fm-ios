@@ -281,6 +281,7 @@
         }
         self.showContent = showScheduleHelper.mutableCopy;
         [self updateLastUpdatedTime];
+        [self sortShowContentByDay];
         dispatch_async(dispatch_get_main_queue(),
                        ^{ [[NSNotificationCenter defaultCenter] postNotificationName:@"refresh_home_on_hour"
                                                                               object:self
@@ -342,6 +343,23 @@
 
 -(void)setShowContentList:(NSMutableArray<KPISSShow *> *)showContentArg{
     self.showContent = showContentArg;
+}
+
+-(void)sortShowContentByDay{
+    NSMutableArray* showContentbyDay = [NSMutableArray array];
+    NSMutableArray<KPISSShow*>* todayShows = [NSMutableArray array];
+    int i = 0;
+    while(i < self.showContent.count){
+        [todayShows addObject:[self.showContent objectAtIndex:i]];
+        i++;
+        while(i < self.showContent.count && [[NSCalendar currentCalendar] isDate:[todayShows objectAtIndex:todayShows.count - 1].startTime inSameDayAsDate:[self.showContent objectAtIndex:i].startTime]){
+            [todayShows addObject:[self.showContent objectAtIndex:i]];
+            i++;
+        }
+        [showContentbyDay addObject:todayShows.mutableCopy];
+        [todayShows removeAllObjects];
+    }
+    self.showContentByDay = showContentbyDay;
 }
 
 //get next show time
@@ -447,36 +465,6 @@
     [metadataOutput setDelegate:self queue:dispatch_get_main_queue()];
     [self.playerItem addOutput:metadataOutput];
     self.player = [AVPlayer playerWithPlayerItem:self.playerItem];
-}
-
-
--(void)metadataOutput:(AVPlayerItemMetadataOutput *)output didOutputTimedMetadataGroups:(NSArray<AVTimedMetadataGroup *> *)groups fromPlayerItemTrack:(AVPlayerItemTrack *)track{
-    //    if(!groups.count){
-    //        return;
-    //    }
-    //    if(!groups[0].items){
-    //        return;
-    //    }
-    //    @try{
-    //        AVMetadataItem * item = groups[0].items[0];
-    //        if([item valueForKeyPath:@"value"]){
-    //            NSString * metaDataSong = [item valueForKeyPath:@"value"];
-    //            NSRange mp3range = NSMakeRange(metaDataSong.length - 4 ,4);
-    //            if([[[metaDataSong uppercaseString] substringWithRange:mp3range] isEqualToString:@".MP3"] || [[[metaDataSong uppercaseString] substringWithRange:mp3range] isEqualToString:@".WAV"] ||[[[metaDataSong uppercaseString] substringWithRange:mp3range] isEqualToString:@".MP4"]){
-    //                NSRange nonMp3range = NSMakeRange(0, metaDataSong.length-4);
-    //                metaDataSong = [metaDataSong substringWithRange:nonMp3range];
-    //            }
-    //            self.lastMetadataItem = metaDataSong;
-    //            [[NSNotificationCenter defaultCenter] postNotificationName:@"refresh_now_playing"
-    //              object:self
-    //            userInfo:@{}];
-    //        }
-    //    }
-    //    @catch(NSException * e){
-    //        return;
-    //    }
-    return;
-    
 }
 
 -(BOOL)isShowCancelled:(NSString*)frequency withEndDate:(NSDate*)endTime{

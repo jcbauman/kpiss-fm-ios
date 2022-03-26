@@ -16,6 +16,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface ScheduleViewController : UIViewController <UITableViewDataSource,UITableViewDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *scheduleTableView;
 @property (strong, nonatomic) NSMutableArray<KPISSShow*> * showContent;
+@property (strong, nonatomic) NSMutableArray<NSMutableArray<KPISSShow*>*> * showContentByDay;
 @property (strong,nonatomic) NSIndexPath * selectedCell;
 @property (strong,nonatomic) NSMutableArray* notificationList;
 - (NSDate*) nextHourDate:(NSDate*)inDate;
