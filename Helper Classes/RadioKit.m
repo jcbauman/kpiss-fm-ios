@@ -292,6 +292,31 @@
     [self getSchedule];
 }
 
+-(NSInteger)getOffsetForRecurrence:(KPISSShow*)thisShow{
+    NSInteger offset = 60*60*24;
+    if([thisShow.frequency isEqualToString:@""]){
+        offset = 0;
+    } else if(([thisShow.frequency rangeOfString:@"UNTIL="].location == NSNotFound) || ![self isShowCancelled:thisShow.frequency withEndDate:thisShow.endTime]){
+        if([thisShow.frequency rangeOfString:@"FREQ=WEEKLY"].location == NSNotFound){
+            //daily - do niente
+        } else if([thisShow.frequency rangeOfString:@"INTERVAL=2"].location == NSNotFound){
+            //weekly
+            offset *= 7;
+        } else {
+            //biweekly
+            offset *= 14;
+        } if([thisShow.frequency rangeOfString:@"FREQ=MONTHLY"].location != NSNotFound){
+            //monthly - weird, delete
+            offset = 0;
+        }
+        
+    }
+    else {
+        offset = 0;
+    }
+    return offset;
+}
+
 -(BOOL)updateScheduleNewTime{
     int count = 0;
     if(self.showContent.count > 0){

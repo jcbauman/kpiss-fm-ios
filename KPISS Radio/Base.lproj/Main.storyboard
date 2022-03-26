@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="aI0-W1-d8d">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="aI0-W1-d8d">
     <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -51,7 +52,7 @@
                                         </constraints>
                                     </imageView>
                                 </subviews>
-                                <color key="backgroundColor" red="1" green="0.0" blue="0.88178604500000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="backgroundColor" name="kpissSalmon"/>
                                 <constraints>
                                     <constraint firstItem="1qC-Wy-cg6" firstAttribute="leading" secondItem="e06-f8-Aga" secondAttribute="trailing" constant="5" id="1nD-XP-0XA"/>
                                     <constraint firstItem="1qC-Wy-cg6" firstAttribute="top" secondItem="vR1-uY-Qmz" secondAttribute="bottom" id="1vW-5y-9hq"/>
@@ -67,7 +68,7 @@
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="8sD-BB-Pdh"/>
-                        <color key="backgroundColor" red="0.99953311680000001" green="0.0" blue="0.90985774990000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" name="kpissSalmon"/>
                         <constraints>
                             <constraint firstItem="8sD-BB-Pdh" firstAttribute="trailing" secondItem="jkA-vX-pyJ" secondAttribute="trailing" id="0CU-MS-2gS"/>
                             <constraint firstItem="Yvc-q9-R9V" firstAttribute="top" secondItem="8sD-BB-Pdh" secondAttribute="top" id="7Ak-jv-Oiq"/>
@@ -205,7 +206,7 @@
                             </button>
                             <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lcO-TN-ReL">
                                 <rect key="frame" x="50" y="698" width="314" height="40"/>
-                                <color key="backgroundColor" red="1" green="0.0" blue="0.88178604500000002" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="backgroundColor" name="kpissSalmon"/>
                                 <constraints>
                                     <constraint firstAttribute="height" priority="999" constant="40" id="vG2-HJ-JBx"/>
                                 </constraints>
@@ -341,7 +342,7 @@ For latest news &amp; updates follow us on Twitter &amp; Instagram...</string>
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" red="1" green="0.0" blue="0.88178604500000002" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="backgroundColor" name="kpissSalmon"/>
                                 <constraints>
                                     <constraint firstItem="PHd-oN-pOc" firstAttribute="top" secondItem="Eyb-14-426" secondAttribute="top" constant="20" id="8DZ-fc-zj5"/>
                                     <constraint firstAttribute="bottom" secondItem="g3E-PV-EvN" secondAttribute="bottom" constant="20" id="8QN-H5-0ft"/>
@@ -404,7 +405,7 @@ For latest news &amp; updates follow us on Twitter &amp; Instagram...</string>
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" red="1" green="0.0" blue="0.88178604500000002" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="backgroundColor" name="kpissSalmon"/>
                                 <constraints>
                                     <constraint firstItem="PWY-bf-BXj" firstAttribute="leading" secondItem="cjj-RS-BcM" secondAttribute="trailing" constant="15" id="CVU-tR-36B"/>
                                     <constraint firstItem="LxC-6n-BBL" firstAttribute="top" secondItem="z5r-IK-cIG" secondAttribute="top" constant="20" id="EYc-pp-XvP"/>
@@ -485,7 +486,7 @@ For latest news &amp; updates follow us on Twitter &amp; Instagram...</string>
                                     <constraint firstAttribute="height" constant="23" id="aMr-E9-kiU"/>
                                     <constraint firstAttribute="width" constant="23" id="xs5-Le-maF"/>
                                 </constraints>
-                                <color key="tintColor" red="1" green="0.0" blue="0.88178604500000002" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="tintColor" name="kpissSalmon"/>
                                 <state key="normal" image="xmark" catalog="system"/>
                                 <connections>
                                     <action selector="dismissThisSucka:" destination="udI-ub-uc8" eventType="touchUpInside" id="UYu-Ze-QTC"/>
@@ -529,7 +530,7 @@ For latest news &amp; updates follow us on Twitter &amp; Instagram...</string>
                                 <color key="sectionIndexBackgroundColor" red="1" green="0.93591099560000002" blue="0.0" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="displayP3"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="schedCell" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="schedCell" rowHeight="194" id="671-bG-RaX" customClass="ScheduleTableViewCell">
-                                        <rect key="frame" x="0.0" y="28" width="404" height="194"/>
+                                        <rect key="frame" x="0.0" y="24.333333969116211" width="404" height="194"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="671-bG-RaX" id="8Zc-pb-k3e">
                                             <rect key="frame" x="0.0" y="0.0" width="404" height="194"/>
@@ -537,7 +538,7 @@ For latest news &amp; updates follow us on Twitter &amp; Instagram...</string>
                                             <subviews>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TUE 8-10" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kTg-PV-NTC">
                                                     <rect key="frame" x="304" y="17" width="90" height="23"/>
-                                                    <color key="backgroundColor" red="1" green="0.0" blue="0.88178604500000002" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <color key="backgroundColor" name="kpissSalmon"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="90" id="YoN-lj-wgg"/>
                                                         <constraint firstAttribute="height" constant="23" id="wse-pn-VTz"/>
@@ -556,7 +557,7 @@ For latest news &amp; updates follow us on Twitter &amp; Instagram...</string>
                                                     <rect key="frame" x="20" y="151" width="297" height="32"/>
                                                     <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="14"/>
                                                     <state key="normal" title="LISTEN TO PREVIOUS EPISODES">
-                                                        <color key="titleColor" red="1" green="0.0" blue="0.88178604500000002" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <color key="titleColor" name="kpissSalmon"/>
                                                     </state>
                                                     <connections>
                                                         <action selector="websiteBtnPressed:" destination="671-bG-RaX" eventType="touchUpInside" id="pkF-Zb-U4n"/>
@@ -568,7 +569,7 @@ For latest news &amp; updates follow us on Twitter &amp; Instagram...</string>
                                                         <constraint firstAttribute="width" secondItem="AOK-IQ-S4o" secondAttribute="height" multiplier="77:31" id="8h4-wE-1sf"/>
                                                         <constraint firstAttribute="height" constant="31" id="V6a-HR-QS0"/>
                                                     </constraints>
-                                                    <color key="tintColor" red="1" green="0.0" blue="0.88178604500000002" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <color key="tintColor" name="kpissSalmon"/>
                                                     <state key="normal" image="bell" catalog="system"/>
                                                 </button>
                                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" indicatorStyle="black" bouncesZoom="NO" editable="NO" text="Tap the bell icon to get reminded when the next show starts" translatesAutoresizingMaskIntoConstraints="NO" id="Rnt-OW-Wg8">
@@ -585,7 +586,7 @@ For latest news &amp; updates follow us on Twitter &amp; Instagram...</string>
                                                         <constraint firstAttribute="height" constant="20.666666666666671" id="ywb-dD-2pm"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" name="Avenir-BlackOblique" family="Avenir" pointSize="14"/>
-                                                    <color key="textColor" red="1" green="0.0" blue="0.88178604500000002" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <color key="textColor" name="kpissSalmon"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -633,7 +634,7 @@ For latest news &amp; updates follow us on Twitter &amp; Instagram...</string>
                                     <constraint firstAttribute="width" secondItem="x6e-cb-OOe" secondAttribute="height" multiplier="1:1" id="2CP-xw-0xG"/>
                                     <constraint firstAttribute="width" constant="19" id="hlX-OY-piq"/>
                                 </constraints>
-                                <color key="tintColor" red="1" green="0.0" blue="0.88178604500000002" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="tintColor" name="kpissSalmon"/>
                                 <state key="normal" image="gear" catalog="system"/>
                                 <connections>
                                     <segue destination="j16-YJ-clJ" kind="popoverPresentation" popoverAnchorView="x6e-cb-OOe" id="UKr-7B-hWR">
@@ -709,7 +710,7 @@ For latest news &amp; updates follow us on Twitter &amp; Instagram...</string>
                                 <color key="backgroundColor" red="1" green="0.93591099560000002" blue="0.0" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="displayP3"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="notifCell" id="5RH-aY-UuB" customClass="NotificationTableViewCell">
-                                        <rect key="frame" x="0.0" y="28" width="354" height="43.666667938232422"/>
+                                        <rect key="frame" x="0.0" y="24.333333969116211" width="354" height="43.666667938232422"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="5RH-aY-UuB" id="eRS-ve-qwI">
                                             <rect key="frame" x="0.0" y="0.0" width="354" height="43.666667938232422"/>
@@ -750,7 +751,7 @@ For latest news &amp; updates follow us on Twitter &amp; Instagram...</string>
                                     <constraint firstAttribute="width" constant="23" id="0iB-RZ-LOZ"/>
                                     <constraint firstAttribute="height" constant="23" id="9iG-2Q-ceO"/>
                                 </constraints>
-                                <color key="tintColor" red="1" green="0.0" blue="0.88178604500000002" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="tintColor" name="kpissSalmon"/>
                                 <state key="normal" image="xmark" catalog="system"/>
                                 <connections>
                                     <action selector="dismissTaooed:" destination="j16-YJ-clJ" eventType="touchUpInside" id="Rnt-gp-y8Y"/>
@@ -795,7 +796,7 @@ For latest news &amp; updates follow us on Twitter &amp; Instagram...</string>
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <color key="selectedImageTintColor" red="1" green="0.0" blue="0.88178604500000002" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="selectedImageTintColor" name="kpissSalmon"/>
                     </tabBar>
                     <connections>
                         <segue destination="Cnj-pn-AdE" kind="relationship" relationship="viewControllers" id="eJD-s5-Sc6"/>
@@ -815,8 +816,8 @@ For latest news &amp; updates follow us on Twitter &amp; Instagram...</string>
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="v0d-hs-4TJ">
-                                <rect key="frame" x="20" y="81.666666666666686" width="374" height="716.33333333333326"/>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="v0d-hs-4TJ">
+                                <rect key="frame" x="27" y="81.666666666666742" width="374" height="716.33333333333326"/>
                                 <subviews>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Tzx-v9-OD6">
                                         <rect key="frame" x="25" y="274" width="324" height="160"/>
@@ -856,7 +857,7 @@ Please email our station manager Sheri Barclay for more information.
                                         <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES"/>
                                     </textView>
                                 </subviews>
-                                <color key="backgroundColor" red="1" green="0.0" blue="0.88178604500000002" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="backgroundColor" name="kpissSalmon"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="MLr-yh-xNH" secondAttribute="trailing" constant="25" id="0qO-l6-FNH"/>
                                     <constraint firstItem="1px-ul-gjd" firstAttribute="top" secondItem="MLr-yh-xNH" secondAttribute="bottom" constant="10" id="7nZ-lG-506"/>
@@ -891,7 +892,7 @@ Please email our station manager Sheri Barclay for more information.
                                     <constraint firstAttribute="width" constant="23" id="eza-Uu-Nce"/>
                                     <constraint firstAttribute="height" constant="23" id="peR-uR-VSq"/>
                                 </constraints>
-                                <color key="tintColor" red="1" green="0.0" blue="0.88178604500000002" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="tintColor" name="kpissSalmon"/>
                                 <state key="normal" image="xmark" catalog="system"/>
                                 <connections>
                                     <action selector="closeTapped:" destination="aJm-J8-n35" eventType="touchUpInside" id="A42-h3-dul"/>
@@ -945,6 +946,9 @@ Please email our station manager Sheri Barclay for more information.
         <image name="tikTokIcon" width="300" height="300"/>
         <image name="twitterLogo" width="512" height="512"/>
         <image name="xmark" catalog="system" width="128" height="113"/>
+        <namedColor name="kpissSalmon">
+            <color red="0.93725490196000005" green="0.28235290000000002" blue="0.41176469999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemGrayColor">
             <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

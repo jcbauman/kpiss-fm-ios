@@ -32,6 +32,7 @@
      self.contentView.layer.shadowColor   = [UIColor blackColor].CGColor;
      self.contentView.layer.shadowOffset  = CGSizeMake(0.0f, 1.0f);
      self.contentView.layer.shadowOpacity = 0.5f;
+    self.timeLbl.backgroundColor = [UIColor colorWithRed:239.0/255.0 green:72.0/255.0 blue:105.0/255.0 alpha:1.0];
      self.contentView.backgroundColor = [UIColor yellowColor];
      self.contentView.frame = CGRectMake(self.bounds.origin.x + 10,
                                           self.bounds.origin.y + 5,
@@ -50,7 +51,7 @@
         [self.websiteBtn setTitle:@"SPECIAL EPISODE!" forState:UIControlStateNormal];
     } else {
         self.contentView.backgroundColor = [UIColor yellowColor];
-        [self.websiteBtn setTitle:@"LISTEN TO PREVIOUS EPISODES" forState:UIControlStateNormal];
+        [self.websiteBtn setTitle:@"MORE EPISODES" forState:UIControlStateNormal];
     };
     [self.descriptionText setContentOffset:CGPointZero animated:YES];
 }

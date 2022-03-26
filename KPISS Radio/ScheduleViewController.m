@@ -67,11 +67,11 @@
     
     if(self.showContent.count >= indexPath.row){
         cell.showNameLabel.text = [self.showContent objectAtIndex:indexPath.row].showName;
-//        if([self.showContent objectAtIndex:indexPath.row].showDescription){
-//            cell.descriptionText.text = [self.showContent objectAtIndex:indexPath.row].showDescription;
-//        } else {
-            cell.descriptionText.text = @"Tap the bell icon to get reminded when the next show starts";
-//        }
+        //        if([self.showContent objectAtIndex:indexPath.row].showDescription){
+        //            cell.descriptionText.text = [self.showContent objectAtIndex:indexPath.row].showDescription;
+        //        } else {
+        cell.descriptionText.text = @"Tap the bell icon to get reminded when the next show starts";
+        //        }
     }
     
     //format showtime
@@ -119,15 +119,15 @@
     [generator impactOccurred];
     if(self.selectedCell != indexPath){
         self.selectedCell = indexPath;
-//        if(!self.showContent[indexPath.row].showDescription){
-//            [[RadioKit radioKit] makeShowDataRequest:self.showContent[indexPath.row].websiteLink completionHandler:^(NSArray *returnArray) {
-//                if(returnArray.count > 1){
-//                    self.showContent[indexPath.row].imageURL = returnArray[0];
-//                    self.showContent[indexPath.row].showDescription = returnArray[1];
-//                    [tableView reloadData];
-//                }
-//            }];
-//        }
+        //        if(!self.showContent[indexPath.row].showDescription){
+        //            [[RadioKit radioKit] makeShowDataRequest:self.showContent[indexPath.row].websiteLink completionHandler:^(NSArray *returnArray) {
+        //                if(returnArray.count > 1){
+        //                    self.showContent[indexPath.row].imageURL = returnArray[0];
+        //                    self.showContent[indexPath.row].showDescription = returnArray[1];
+        //                    [tableView reloadData];
+        //                }
+        //            }];
+        //        }
     } else {
         self.selectedCell = NULL;
     }
@@ -138,16 +138,16 @@
     if([RadioKit radioKit].showContent.count >= sender.tag){
         NSURL * URL = [NSURL URLWithString:[RadioKit radioKit].showContent[sender.tag].websiteLink];
         if( [[UIApplication sharedApplication] canOpenURL:URL])
-               [[UIApplication sharedApplication] openURL:URL options:nil completionHandler:^(BOOL success) {
-                   return;
-               }];
-//        NSURL *URL = [NSURL URLWithString:[RadioKit radioKit].showContent[sender.tag].websiteLink];
-//        if(URL){
-//            UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle: nil];
-//            ShowWebViewController * vc = [storyboard instantiateViewControllerWithIdentifier:@"showDetailsVc"];
-//            vc.websiteLink = URL;
-//            [self presentViewController:vc animated:YES completion:nil];
-//        }
+            [[UIApplication sharedApplication] openURL:URL options:nil completionHandler:^(BOOL success) {
+                return;
+            }];
+        //        NSURL *URL = [NSURL URLWithString:[RadioKit radioKit].showContent[sender.tag].websiteLink];
+        //        if(URL){
+        //            UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle: nil];
+        //            ShowWebViewController * vc = [storyboard instantiateViewControllerWithIdentifier:@"showDetailsVc"];
+        //            vc.websiteLink = URL;
+        //            [self presentViewController:vc animated:YES completion:nil];
+        //        }
     }
 }
 
@@ -195,24 +195,25 @@
             }
         }
         
-            UNTimeIntervalNotificationTrigger * trigger = [UNTimeIntervalNotificationTrigger triggerWithTimeInterval:triggerInterval repeats:NO];
-            
-            UNNotificationRequest * request = [UNNotificationRequest requestWithIdentifier:showToSchedule.showName content:content trigger:trigger];
-            [center addNotificationRequest:request withCompletionHandler:^(NSError * _Nullable error) {
-                if(error){
-                    NSLog(@"%@", error);
-                } else {
-                    NSLog(@"addedNotification");
-                    if(![self.notificationList containsObject:showToSchedule.showName]){
-                        [self.notificationList addObject:showToSchedule.showName];
-                        dispatch_async(dispatch_get_main_queue(), ^{
-                            [self.scheduleTableView reloadData];
-                        });
-                    }
+        UNTimeIntervalNotificationTrigger * trigger = [UNTimeIntervalNotificationTrigger triggerWithTimeInterval:triggerInterval repeats:NO];
+
+        
+        UNNotificationRequest * request = [UNNotificationRequest requestWithIdentifier:showToSchedule.showName content:content trigger:trigger];
+        [center addNotificationRequest:request withCompletionHandler:^(NSError * _Nullable error) {
+            if(error){
+                NSLog(@"%@", error);
+            } else {
+                NSLog(@"addedNotification");
+                if(![self.notificationList containsObject:showToSchedule.showName]){
+                    [self.notificationList addObject:showToSchedule.showName];
+                    dispatch_async(dispatch_get_main_queue(), ^{
+                        [self.scheduleTableView reloadData];
+                    });
                 }
-            }];
+            }
+        }];
     }
-    }
+}
 
 
 -(void)reloadSchedule:(id)sender{
