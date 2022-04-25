@@ -56,7 +56,7 @@
     if(indexPath == self.selectedCell){
         return 250;
     } else {
-        return 62;
+        return 60;
     }
 }
 
@@ -76,13 +76,22 @@
 -(UITableViewCell*) tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     ScheduleTableViewCell * cell = (ScheduleTableViewCell*)[tableView dequeueReusableCellWithIdentifier:@"schedCell"];
     KPISSShow* thisShow = [[self.showContentByDay objectAtIndex:indexPath.section] objectAtIndex:indexPath.row];
-    if(self.showContent.count >= indexPath.row){
+    cell.showNameLabel.text = thisShow.showName;
+    if(self.selectedCell == indexPath){
         cell.showNameLabel.text = thisShow.showName;
-        //        if([self.showContent objectAtIndex:indexPath.row].showDescription){
-        //            cell.descriptionText.text = [self.showContent objectAtIndex:indexPath.row].showDescription;
-        //        } else {
+        if(thisShow.imageURL){
+            NSData * data = [[NSData alloc] initWithContentsOfURL: [NSURL URLWithString: thisShow.imageURL]];
+            if(data){
+                cell.backgroundImage.image = [UIImage imageWithData:data];
+            } else {
+                cell.backgroundImage.image = NULL;
+            }
+        }
+        if([thisShow.showDescription length] != 0){
+                    cell.descriptionText.text = thisShow.showDescription;
+                } else {
         cell.descriptionText.text = @"Tap the bell icon to get reminded when the next show starts";
-        //        }
+                }
     }
     
     //format showtime
@@ -104,6 +113,7 @@
         cell.websiteBtn.hidden = YES;
         cell.notificationBtn.hidden = YES;
         cell.djLabel.hidden = YES;
+        cell.backgroundImage.hidden = YES;
         //cell.descriptionText.hidden = YES;
     } else {
         if(thisShow.websiteLink){
@@ -111,6 +121,7 @@
         }
         cell.notificationBtn.hidden = NO;
         cell.djLabel.hidden = NO;
+//        cell.backgroundImage.hidden = NO;
         //cell.descriptionText.hidden = NO;
         [cell.djLabel setText:thisShow.showDJ];
         if(![self.notificationList containsObject:thisShow.showName]){
@@ -132,15 +143,18 @@
     [generator impactOccurred];
     if(self.selectedCell != indexPath){
         self.selectedCell = indexPath;
-        //        if(!self.showContent[indexPath.row].showDescription){
-        //            [[RadioKit radioKit] makeShowDataRequest:self.showContent[indexPath.row].websiteLink completionHandler:^(NSArray *returnArray) {
-        //                if(returnArray.count > 1){
-        //                    self.showContent[indexPath.row].imageURL = returnArray[0];
-        //                    self.showContent[indexPath.row].showDescription = returnArray[1];
-        //                    [tableView reloadData];
-        //                }
-        //            }];
-        //        }
+                if(!self.showContentByDay[indexPath.section][indexPath.row].imageURL){
+                    [[RadioKit radioKit] makeShowDataRequest:self.showContentByDay[indexPath.section][indexPath.row].websiteLink completionHandler:^(NSArray *returnArray) {
+                        if(returnArray.count > 1){
+//                            self.showContentByDay[indexPath.section][indexPath.row].imageURL = returnArray[0];
+                            self.showContentByDay[indexPath.section][indexPath.row].showDescription = returnArray[1];
+                            dispatch_async(dispatch_get_main_queue(), ^{
+                            [tableView reloadData];
+                            });
+                        }
+                    }];
+
+                }
     } else {
         self.selectedCell = NULL;
     }

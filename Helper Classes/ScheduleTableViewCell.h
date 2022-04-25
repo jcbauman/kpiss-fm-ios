@@ -20,6 +20,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (weak, nonatomic) IBOutlet UIButton *websiteBtn;
 @property (weak, nonatomic) IBOutlet UIButton *notificationBtn;
 @property (weak, nonatomic) IBOutlet UITextView *descriptionText;
+@property (weak, nonatomic) IBOutlet UIImageView *backgroundImage;
 
 @property (weak, nonatomic) IBOutlet NSString *isSpecialShow;
 

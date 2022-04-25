@@ -35,10 +35,10 @@
     self = [super init];
     if(self){
         self.showContent = [[NSMutableArray alloc] init];
-//        [self makeShowDataRequest:@"https://kpiss.fm/show/lunar-rotation" completionHandler:^(NSArray *returnArray) {
-//         }];
+        //        [self makeShowDataRequest:@"https://kpiss.fm/show/lunar-rotation" completionHandler:^(NSArray *returnArray) {
+        //         }];
         //[self getSchedule];
-            [self configurePlayer];
+        [self configurePlayer];
         self.isPlaying = @"NO";
         self.lastMetadataItem = @"Live Talk Radio";
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updateFromBackground:) name:UIApplicationWillEnterForegroundNotification object:nil];
@@ -80,11 +80,11 @@
                                 thisShow.showName = fullShowName;
                                 thisShow.showDJ = @"KPISS DJ";
                             }
-//                            if([entry valueForKey:@"location"]){
-//                                if(![[entry valueForKey:@"location"] isEqualToString:@"www.kpiss.fm"]){
-//                                    thisShow.imageURL = [entry valueForKey:@"location"];
-//                                }
-//                            }
+                            //                            if([entry valueForKey:@"location"]){
+                            //                                if(![[entry valueForKey:@"location"] isEqualToString:@"www.kpiss.fm"]){
+                            //                                    thisShow.imageURL = [entry valueForKey:@"location"];
+                            //                                }
+                            //                            }
                             thisShow.frequency = ((NSArray*)[entry valueForKey:@"recurrence"])[0];
                             thisShow.recurringEventId = ((NSString*)[entry valueForKey:@"recurringEventId"]);
                             if([entry valueForKey:@"description"]){
@@ -108,7 +108,7 @@
                                                    initWithName:@"UTC"];
                             
                             NSDate *startDate = [dateFormat dateFromString:[((NSDictionary*)[entry valueForKey:@"start"]) objectForKey:@"dateTime"]];
-                                                    
+                            
                             
                             if([[[NSCalendar currentCalendar] components:(NSCalendarUnitHour | NSCalendarUnitMinute) fromDate:startDate] minute] == 59){
                                 thisShow.startTime = [startDate dateByAddingTimeInterval:60];
@@ -162,9 +162,6 @@
         for(int i = 0; i < showScheduleHelper.count; i++){
             if(i >= 0 && i < showScheduleHelper.count){
                 KPISSShow* thisShow = ((KPISSShow*)showScheduleHelper[i]);
-                if([thisShow.showName isEqualToString:@"Lunar Rotation"]){
-                    NSLog(@"groove");
-                }
                 NSDate * relevantDate = thisShow.endTime;
                 NSInteger offset = 60*60*24;
                 if([thisShow.frequency isEqualToString:@""]){
@@ -203,8 +200,8 @@
                         }
                         relevantDate = newRelevantDate;
                     }
-                
-                
+                    
+                    
                     //                    relevantDate = [self adjustForTimeZone:relevantDate withOriginalDate:thisShow.endTime];
                     NSTimeInterval showLength = [thisShow.startTime timeIntervalSinceDate:thisShow.endTime];
                     thisShow.endTime = relevantDate;
@@ -234,7 +231,7 @@
                         nextDate = [nextDate dateByAddingTimeInterval:offset];
                         count++;
                     }
-
+                    
                 } if([inTwoWeeks compare:relevantDate] == NSOrderedAscending){
                     [showScheduleHelper removeObjectAtIndex:i];
                     i--;
@@ -324,7 +321,7 @@
         for(int i = 0; i < self.showContent.count;i++){
             if(i>=0 && i < 20){
                 if([self.showContent[i].endTime compare:[NSDate date]] == NSOrderedAscending){
-
+                    
                     //show is long gone buddy
                     [self.showContent removeObjectAtIndex:i];
                     count++;
@@ -389,58 +386,62 @@
 -(void) makeShowDataRequest:(NSString*)webLink completionHandler:(void (^)(NSArray *array))completionHandler{
     __block NSArray* returnArray = [[NSArray alloc] init];
     if(webLink){
-    NSString* baselineWebLink = @"https://kpiss.fm/show/";
-    NSString * baselineReqCall = @"https://kpiss.fm//wp-json/wp/v2/show?_embed&slug=";
-    NSRange range1 = [webLink rangeOfString:@"show/"];
-    if (range1.location != NSNotFound) {
-        NSRange rangeSlug = NSMakeRange(range1.location + 5, webLink.length - baselineWebLink.length);
-        NSString* slug = [webLink substringWithRange:rangeSlug];
-        if(!slug){
-            completionHandler(returnArray);
-        }
-        NSString* showApiCall = [baselineReqCall stringByAppendingString:slug];
-        NSURL *url = [NSURL URLWithString:showApiCall];
-        
-        NSMutableURLRequest *request = [[NSMutableURLRequest alloc] init];
-        [request setHTTPMethod:@"GET"];
-        [request setURL:url];
-
-        //make request to wordpress site
-        [[[NSURLSession sharedSession] dataTaskWithRequest:request completionHandler:
-          ^(NSData * _Nullable data,
-            NSURLResponse * _Nullable response,
-            NSError * _Nullable error) {
-
-            if(error){
-                NSLog(@"Bad slug, %@", error);
+        NSString* baselineWebLink = @"https://kpiss.fm/show/";
+        NSString * baselineReqCall = @"https://kpiss.fm//wp-json/wp/v2/show?_embed&slug=";
+        NSRange range1 = [webLink rangeOfString:@"show/"];
+        if (range1.location != NSNotFound) {
+            NSRange rangeSlug = NSMakeRange(range1.location + 5, webLink.length - baselineWebLink.length);
+            NSString* slug = [webLink substringWithRange:rangeSlug];
+            if(!slug){
                 completionHandler(returnArray);
             }
-            NSArray *jsonArray = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
-            if(jsonArray.count > 0){
-                NSMutableDictionary* jsonDict = jsonArray[0];
-                if([jsonDict valueForKey:@"acf"]){
-                    jsonDict = [jsonDict valueForKey:@"acf"];
+            NSString* showApiCall = [baselineReqCall stringByAppendingString:slug];
+            NSURL *url = [NSURL URLWithString:showApiCall];
+            
+            NSMutableURLRequest *request = [[NSMutableURLRequest alloc] init];
+            [request setHTTPMethod:@"GET"];
+            [request setURL:url];
+            
+            //make request to wordpress site
+            [[[NSURLSession sharedSession] dataTaskWithRequest:request completionHandler:
+              ^(NSData * _Nullable data,
+                NSURLResponse * _Nullable response,
+                NSError * _Nullable error) {
+                
+                if(error){
+                    NSLog(@"Bad slug, %@", error);
+                    completionHandler(returnArray);
+                }
+                NSArray *jsonArray = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
+                if(jsonArray.count > 0){
+                    NSMutableDictionary* jsonDict = jsonArray[0];
                     NSString* imageLink = @"";
                     NSString* description = @"";
-                    if([jsonDict valueForKey:@"image"]){
-                        imageLink = [jsonDict valueForKey:@"image"];
-                    }
-                    if([jsonDict valueForKey:@"description"]){
-                        description = [jsonDict valueForKey:@"description"];
-                        NSRange removePs = NSMakeRange(3,description.length - 8);
-                        if(description.length > 0){
-                        if([description substringWithRange:removePs]){
-                        description = [description substringWithRange:removePs];
+                    if([jsonDict valueForKey:@"acf"]){
+                        NSMutableDictionary* acfDict = [jsonDict valueForKey:@"acf"];
+                        if([acfDict valueForKey:@"image"]){
+                            imageLink = [acfDict valueForKey:@"image"];
                         }
-                        }
-                        returnArray = [NSArray arrayWithObjects:imageLink, description, nil];
                     }
+                    if([jsonDict valueForKey:@"yoast_head"]){
+                        NSString* seoString = [jsonDict valueForKey:@"yoast_head"];
+                        NSRange descriptionStartRange = [seoString rangeOfString:@"og:description\" content=\""];
+                        if(descriptionStartRange.location != NSNotFound){
+                            NSString * parsedDescription = [seoString substringWithRange:NSMakeRange(descriptionStartRange.location + descriptionStartRange.length, seoString.length - descriptionStartRange.location - descriptionStartRange.length)];
+                            NSRange descriptionEndRange = [parsedDescription rangeOfString:@"\" />"];
+                            if(descriptionEndRange.location != NSNotFound){
+                                description = [parsedDescription substringToIndex:descriptionEndRange.location];
+                            }
+                        }
+                    }
+                    returnArray = [NSArray arrayWithObjects:imageLink, description, nil];
+                    //                    }
+                    
                 }
-            }
-            completionHandler(returnArray);
-
-        }] resume];
-    }
+                completionHandler(returnArray);
+                
+            }] resume];
+        }
     } else {
         completionHandler(returnArray);
     }
@@ -537,7 +538,7 @@
     [dateFormatter setTimeZone:timeZone];
     [dateFormatter setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
     NSDate * locDate = localDate;
-    NSString *dateString = [dateFormatter stringFromDate:localDate];
+    NSString *dateString = [dateFormatter stringFromDate:locDate];
     return dateString;
 }
 

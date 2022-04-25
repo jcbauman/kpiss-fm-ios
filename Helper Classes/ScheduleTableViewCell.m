@@ -53,6 +53,7 @@
         [self.websiteBtn setTitle:@"MORE EPISODES" forState:UIControlStateNormal];
     };
     [self.descriptionText setContentOffset:CGPointZero animated:YES];
+//    self.backgroundImage.image = NULL;
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

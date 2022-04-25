@@ -536,6 +536,9 @@ For latest news &amp; updates follow us on Twitter &amp; Instagram...</string>
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="194"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
+                                                <imageView opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.25" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="MVZ-DZ-3ey">
+                                                    <rect key="frame" x="0.0" y="-1" width="414" height="195"/>
+                                                </imageView>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TUE 8-10" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kTg-PV-NTC">
                                                     <rect key="frame" x="314" y="17" width="90" height="23"/>
                                                     <color key="backgroundColor" name="kpissSalmon"/>
@@ -599,19 +602,24 @@ For latest news &amp; updates follow us on Twitter &amp; Instagram...</string>
                                                 <constraint firstAttribute="trailing" secondItem="kTg-PV-NTC" secondAttribute="trailing" constant="10" id="GtZ-d3-Pdg"/>
                                                 <constraint firstItem="AOK-IQ-S4o" firstAttribute="centerY" secondItem="JBi-9U-C6V" secondAttribute="centerY" id="JIb-BU-Ing"/>
                                                 <constraint firstItem="AOK-IQ-S4o" firstAttribute="leading" secondItem="JBi-9U-C6V" secondAttribute="trailing" constant="5" id="Jav-ak-A1r"/>
+                                                <constraint firstItem="MVZ-DZ-3ey" firstAttribute="top" secondItem="8Zc-pb-k3e" secondAttribute="top" constant="-1" id="Nco-Z7-KdT"/>
                                                 <constraint firstItem="kTg-PV-NTC" firstAttribute="top" secondItem="8Zc-pb-k3e" secondAttribute="top" constant="17" id="Q3A-up-RKd"/>
+                                                <constraint firstAttribute="bottom" secondItem="MVZ-DZ-3ey" secondAttribute="bottom" id="QNa-sv-1OK"/>
                                                 <constraint firstItem="usV-g0-WdZ" firstAttribute="leading" secondItem="8Zc-pb-k3e" secondAttribute="leading" constant="20" id="RaM-fj-gxY"/>
                                                 <constraint firstAttribute="trailing" secondItem="Rnt-OW-Wg8" secondAttribute="trailing" constant="20" id="UNj-R1-5W6"/>
+                                                <constraint firstAttribute="trailing" secondItem="MVZ-DZ-3ey" secondAttribute="trailing" id="Xwi-DO-tZS"/>
                                                 <constraint firstItem="Rnt-OW-Wg8" firstAttribute="top" secondItem="StG-pA-uHl" secondAttribute="bottom" constant="25" id="aEf-W1-yqc"/>
                                                 <constraint firstItem="StG-pA-uHl" firstAttribute="top" secondItem="kTg-PV-NTC" secondAttribute="bottom" constant="5" id="b4f-Ku-Gfn"/>
                                                 <constraint firstItem="JBi-9U-C6V" firstAttribute="leading" secondItem="8Zc-pb-k3e" secondAttribute="leading" constant="20" id="dL2-Pk-26T"/>
                                                 <constraint firstItem="StG-pA-uHl" firstAttribute="trailing" secondItem="kTg-PV-NTC" secondAttribute="trailing" id="dp5-UT-gTF"/>
                                                 <constraint firstItem="Rnt-OW-Wg8" firstAttribute="leading" secondItem="8Zc-pb-k3e" secondAttribute="leading" constant="15" id="heh-vq-2e7"/>
+                                                <constraint firstItem="MVZ-DZ-3ey" firstAttribute="leading" secondItem="8Zc-pb-k3e" secondAttribute="leading" id="hwV-fo-ncN"/>
                                                 <constraint firstAttribute="trailing" secondItem="AOK-IQ-S4o" secondAttribute="trailing" constant="5" id="hyX-TJ-UL8"/>
                                                 <constraint firstItem="StG-pA-uHl" firstAttribute="leading" secondItem="8Zc-pb-k3e" secondAttribute="leading" constant="20" id="l0H-wP-NOE"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="backgroundImage" destination="MVZ-DZ-3ey" id="PrH-ID-DWl"/>
                                             <outlet property="descriptionText" destination="Rnt-OW-Wg8" id="BdZ-it-Vo6"/>
                                             <outlet property="djLabel" destination="StG-pA-uHl" id="07c-6M-Erx"/>
                                             <outlet property="notificationBtn" destination="AOK-IQ-S4o" id="DZh-i7-l7e"/>
